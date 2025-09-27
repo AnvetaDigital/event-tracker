@@ -8,20 +8,17 @@ const Dashboard = () => {
   const [events, setEvents] = useState([]);
   const [filter, setFilter] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [showForm, setShowForm] = useState(false); 
-  
+  const [showForm, setShowForm] = useState(false);
+
   const navigate = useNavigate();
 
   const loadEvents = async () => {
     try {
       setLoading(true);
-      setError("");
       const data = await fetchEvents(filter);
       setEvents(data);
     } catch (err) {
       console.error(err);
-      setError("Failed to load events");
     } finally {
       setLoading(false);
     }
@@ -31,12 +28,12 @@ const Dashboard = () => {
     loadEvents();
   }, [filter]);
 
-   const handleLogout = () => {
-     localStorage.removeItem("token");
-     localStorage.removeItem("user");
-     navigate("/"); 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/");
   };
-  
+
   return (
     <div style={{ padding: "1rem" }}>
       <h2 className="dashboard-title">Your Events</h2>
@@ -77,7 +74,6 @@ const Dashboard = () => {
 
       {/* Events list */}
       {loading && <p>Loading events...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
       {!loading && events.length === 0 && (
         <p className="empty-msg">
           🎉 Welcome! You don’t have any events yet. Click{" "}
