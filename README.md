@@ -14,24 +14,27 @@ A full-stack web application where users can sign up, log in, and manage persona
 
 ---
 
-## 📂 Project Structure
+## Project Structure
+
+```plaintext
 event-tracker/
-├── backend/ # Express API (auth + events)
-│ └── src/
-│ ├── config/ # DB connection
-│ ├── models/ # Mongoose schemas
-│ ├── controllers/ # Business logic
-│ ├── routes/ # API routes
-│ ├── middlewares/ # Auth check
-│ └── server.js
+├── backend/                # Express API (auth + events)
+│   └── src/
+│       ├── config/         # DB connection
+│       ├── models/         # Mongoose schemas
+│       ├── controllers/    # Business logic
+│       ├── routes/         # API routes
+│       ├── middlewares/    # Auth check
+│       └── server.js
 │
-└── frontend/ # React frontend
-└── src/
-├── components/ # Login, Signup, Dashboard, EventForm, EventList
-├── App.jsx
-└── main.jsx
-└── index.css
----
+└── frontend/
+ └── event-tracker            # React frontend
+    └── src/
+        ├── components/     # Login, Signup, Dashboard, EventForm, EventList
+        ├── App.jsx
+        └── main.jsx
+        └── index.css
+
 
 ## ⚙️ Setup Instructions
 
@@ -69,7 +72,6 @@ npm run dev
 🔑 JWT Authentication (Signup/Login)
 📝 Create, view, and filter events (upcoming/past)
 📱 Responsive layout (mobile + desktop)
-🔗 Bonus: Public shareable event link (optional)
 
 🔒 Security Notes
 Passwords hashed with bcrypt
@@ -79,5 +81,5 @@ Basic validation & error handling
 📌 Trade-offs & Assumptions
 No email verification (to save time)
 Basic UI for simplicity
-Public event links are unprotected URLs
+
 
