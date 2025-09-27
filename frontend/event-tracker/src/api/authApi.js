@@ -1,4 +1,4 @@
-const AUTH_URL = "http://localhost:5000/api/auth";
+const AUTH_URL = "https://event-tracker-zos0.onrender.com/api/auth";
 
 export const registerUser = async (data) => {
   try {
