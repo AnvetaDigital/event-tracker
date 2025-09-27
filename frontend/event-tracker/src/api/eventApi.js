@@ -1,5 +1,5 @@
-const CREATE_EVENT_URL = "http://localhost:5000/api/events";
-const GET_EVENTS_URL = "http://localhost:5000/api/events/list";
+const CREATE_EVENT_URL = "https://event-tracker-zos0.onrender.com/api/events";
+const GET_EVENTS_URL = "https://event-tracker-zos0.onrender.com/api/events/list";
 
 function getAuthHeader() {
   const token = localStorage.getItem("token");
