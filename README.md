@@ -16,22 +16,21 @@ A full-stack web application where users can sign up, log in, and manage persona
 
 ## 📂 Project Structure
 event-tracker/
-│
 ├── backend/ # Express API (auth + events)
-│ ├── src/
-│ │ ├── config/ # DB connection
-│ │ ├── models/ # Mongoose schemas
-│ │ ├── controllers/ # Business logic
-│ │ ├── routes/ # API routes
-│ │ ├── middlewares/ # Auth check
-│ │ └── index.js
+│ └── src/
+│ ├── config/ # DB connection
+│ ├── models/ # Mongoose schemas
+│ ├── controllers/ # Business logic
+│ ├── routes/ # API routes
+│ ├── middlewares/ # Auth check
+│ └── server.js
 │
 └── frontend/ # React frontend
-├── src/
-│ ├── components/ #Login, Signup, Dashboard, EventForm, EventList
-│ ├── App.jsx
-│ └── main.jsx
-
+└── src/
+├── components/ # Login, Signup, Dashboard, EventForm, EventList
+├── App.jsx
+└── main.jsx
+└── index.css
 ---
 
 ## ⚙️ Setup Instructions
