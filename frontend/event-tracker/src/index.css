@@ -1,0 +1,238 @@
+/* ============================= */
+/* Auth Forms (Login / Signup)  */
+/* ============================= */
+
+.form-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.form-label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  border-color: #457b9d;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(69, 123, 157, 0.2);
+}
+
+.form-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.login-button {
+  background: #1d3557;
+  color: #fff;
+}
+.login-button:hover { background: #16324f; }
+
+.register-button {
+  background: #457b9d;
+  color: #fff;
+}
+.register-button:hover { background: #35627a; }
+
+/* Messages */
+.success-msg, .error-msg {
+  text-align: center;
+  margin-top: 1rem;
+}
+.success-msg { color: green; }
+.error-msg { color: red; }
+
+/* Footer links */
+.form-footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.form-link {
+  color: #1d3557;
+  font-weight: 600;
+  text-decoration: none;
+}
+.form-link:hover { text-decoration: underline; }
+
+/* ============================= */
+/* Responsive Forms              */
+/* ============================= */
+@media (max-width: 480px) {
+  .form-container { margin: 1.5rem; padding: 1.5rem; }
+}
+
+/* ============================= */
+/* Dashboard / Event Layout      */
+/* ============================= */
+.dashboard-container {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logout-btn {
+  background: #e63946;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+}
+.logout-btn:hover { background: #d62828; }
+
+.dashboard-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #1d3557;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+/* Empty state */
+.empty-msg {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+.empty-msg strong { color: #1d3557; }
+
+/* ============================= */
+/* Event List & Cards            */
+/* ============================= */
+.event-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.event-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fdfdfd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Colors for Past vs Upcoming */
+.event-card.upcoming {
+  border-left: 6px solid #2a9d8f;
+  background: #e6f7f5;
+}
+.event-card.past {
+  border-left: 6px solid #e76f51;
+  background: #fdf0ed;
+}
+
+/* Event Card Text */
+.event-title { font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem; }
+.event-date, .event-location, .event-desc { font-size: 0.95rem; margin: 0.3rem 0; color: #444; }
+
+/* Responsive */
+@media (max-width: 700px) { .event-list { grid-template-columns: 1fr; } }
+
+/* ============================= */
+/* Filter Buttons                */
+/* ============================= */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #457b9d;
+  background: #f1f5f9;
+  color: #1d3557;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+.filter-buttons button:hover,
+.filter-buttons .active {
+  background: #457b9d;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ============================= */
+/* Event Form & Add Event Button  */
+/* ============================= */
+.event-form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.event-form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  min-width: 160px;
+}
+
+.event-form button,
+.add-event-toggle button {
+  background: #2a9d8f;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+.event-form button:hover,
+.add-event-toggle button:hover { background: #21867a; }
+
+.add-event-toggle { text-align: center; margin: 1rem 0; }
